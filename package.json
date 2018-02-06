@@ -1,0 +1,25 @@
+{
+  "name": "elasticemail",
+  "version": "1.0.0",
+  "description": "Elastic Email for node",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejonext/elasticemail.git"
+  },
+  "keywords": [
+    "elasticemail",
+    "elstic",
+    "email",
+    "api"
+  ],
+  "author": "AlejoNext <alejonext@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejonext/elasticemail/issues"
+  },
+  "homepage": "https://github.com/alejonext/elasticemail#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

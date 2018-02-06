@@ -48,19 +48,19 @@ class Elastic {
 
 	request (optionObj, file) {
 
-		var params = { method: 'POST', formData: file };
+		var params = { method: 'POST', formData: file, uri : Elastic.BASE_URL + Elastic.VERSION };
 
 		if (typeof optionObj !== "object") {
-			let msg = 'FAILED! Request Method: input typeof is "' + typeof optionObj + '" but should be: "object"!';
+			let msg = `FAILED! Request Method: input typeof is "${typeof optionObj}" but should be: "object"!`;
 			return optionObj.callback ? optionObj.callback(null, msg) : Promise.reject(msg);
 		}
 
 		if (optionObj && typeof optionObj.path !== 'string') {
-			let msg = 'FAILED! Request Method: input.path property typeof is "' +  typeof optionObj.path + '" but should be: "string"!';
+			let msg = `FAILED! Request Method: input.path property typeof is "${typeof optionObj.path}" but should be: "string"!`;
 			return optionObj.callback ? optionObj.callback(null, msg) : Promise.reject(msg);
 		}
 
-		params.uri = Elastic.BASE_URL + Elastic.VERSION + optionObj.path + this._getParameters(optionObj.params, optionObj.hideApiKey);
+		params.uri += optionObj.path + this._getParameters(optionObj.params, optionObj.hideApiKey);
 
 		if(optionObj.callback){
 			_request(params, (err, res, body) => optionObj.callback({
