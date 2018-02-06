@@ -2,12 +2,13 @@
 
 
 ```
-npm install --save 
+npm install --save elastic-email-client
 
 ```
 
 
 ```
+var ElasticEmail = require('elastic-email-client');
 var elastic = new ElasticEmail('-- API KEY --');
 
 // Methods
