@@ -1,5 +1,5 @@
 {
-  "name": "elasticemail",
+  "name": "elastic-email-client",
   "version": "1.0.0",
   "description": "Elastic Email for node",
   "main": "index.js",
