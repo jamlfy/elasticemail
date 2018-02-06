@@ -71,8 +71,8 @@ class Elastic {
 			return this;
 		} else {
 			return new Promise(
-				(resolver, rechazar) => _request(params, 
-					(err, res, body) => err ? rechazar(err) : resolver({
+				(res, rec) => _request(params, 
+					(err, res, body) => err ? rec(err) : res({
 						response: body,
 						path: params.uri
 					})));
