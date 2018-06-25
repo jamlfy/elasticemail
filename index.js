@@ -39,7 +39,7 @@ class Elastic {
 	}
 
 	setApiKey (str) {
-		if(str !== 'string'){
+		if(typeof str !== 'string'){
 			throw new Error('Is need a the API Key');
 		}
 
